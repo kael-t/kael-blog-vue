@@ -1,0 +1,287 @@
+.loading-mask {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+.loading {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+[class*="loading-wrap"] {
+    z-index: 1000;
+}
+/************** loading类型 **************/
+/**
+ * 1、clock-loading
+ * html片段:
+ * <div class="loading clock-loading-wrap">
+ *      <div class="clock-loading">
+ *      </div>
+ *  </div>
+ */
+.clock-loading-wrap{
+    width: 4rem;
+    height: 4rem;
+}
+.clock-loading {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: #32d3c3 solid 0.4rem;
+}
+.clock-loading:before,
+.clock-loading:after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 0.4rem;
+    left: 2.125rem;
+    border-radius: 1rem;
+    background-color: #32d3c3;
+    -webkit-transform-origin: bottom;
+    -moz-transform-origin: bottom;
+    -ms-transform-origin: bottom;
+    -o-transform-origin: bottom;
+    transform-origin: bottom;
+}
+.clock-loading:before {
+    top: 0.65rem;
+    height: 1.7rem;
+    -webkit-animation: clock-loader 1000ms infinite linear;
+    -o-animation: clock-loader 1000ms infinite linear;
+    -moz-animation:  clock-loader 1000ms infinite linear;
+    animation: clock-loader 1000ms infinite linear;
+}
+.clock-loading:after {
+    top: 1rem;
+    height: 1.4rem;
+    -webkit-animation: clock-loader 12000ms infinite linear;
+    -o-animation: clock-loader 12000ms infinite linear;
+    -moz-animation:  clock-loader 12000ms infinite linear;
+    animation: clock-loader 12000ms infinite linear;
+}
+@-moz-keyframes clock-loader {
+    0% {
+        -moz-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes clock-loader {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes clock-loader {
+    0% {
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+/**
+ * 2、cardiogram-loading
+ * html片段:
+ * <div class="loading cardiogram-loading-wrap">
+ *      <div class="cardiogram-loading">
+ *          <span></span>
+ *          <span></span>
+ *          <span></span>
+ *          <span></span>
+ *          <span></span>
+ *          <span></span>
+ *          <span></span>
+ *          <span></span>
+ *          <span></span>
+ *          <div></div>
+ *      </div>
+ *  </div>
+ */
+.cardiogram-loading-wrap{
+    height: 6rem;
+    width: 20rem;
+}
+.cardiogram-loading {
+    height: 100%;
+    width: 100%;
+    font-size: 0;
+    text-align: center;
+}
+.cardiogram-loading > *:nth-child(1),
+.cardiogram-loading > *:nth-child(2),
+.cardiogram-loading > *:nth-child(3),
+.cardiogram-loading > *:nth-child(4),
+.cardiogram-loading > *:nth-child(5),
+.cardiogram-loading > *:nth-child(6),
+.cardiogram-loading > *:nth-child(7),
+.cardiogram-loading > *:nth-child(8),
+.cardiogram-loading > *:nth-child(9) {
+    position: relative;
+    top: 2.9rem; /*该值 = ( cardiogram-loading-wrap的height值 - cardiogram-loading > * 的height值 ) ÷ 2*/
+    height: 0.2rem;
+    display: inline-block;
+    -moz-animation: fade 3500ms infinite linear;
+    -webkit-animation: fade 3500ms infinite linear;
+    animation: fade 3500ms infinite linear;
+
+    background-color: #2CADEF;
+}
+.cardiogram-loading > *:nth-child(1) {
+    width: 4rem;
+}
+.cardiogram-loading > *:nth-child(2) {
+    width: 1.5rem;
+    transform: rotate(110deg);
+    top: 2.2rem;
+    left: -0.6rem;
+}
+.cardiogram-loading > *:nth-child(3) {
+    width: 3rem;
+    transform: rotate(70deg);
+    top: 2.8rem;
+    left: -2rem;
+}
+.cardiogram-loading > *:nth-child(4) {
+    width: 1.5rem;
+    transform: rotate(110deg);
+    top: 3.6rem;
+    left: -3.5rem;
+}
+.cardiogram-loading > *:nth-child(5) {
+    width: 1.6rem;
+    left: -4rem;
+}
+.cardiogram-loading > *:nth-child(6) {
+    width: 3rem;
+    transform: rotate(100deg);
+    top: 1.4rem;
+    left: -5.2rem;
+}
+.cardiogram-loading > *:nth-child(7) {
+    width: 6rem;
+    transform: rotate(80deg);
+    top: 2.8rem;
+    left: 4.9rem;
+}
+.cardiogram-loading > *:nth-child(8) {
+    width: 3rem;
+    transform: rotate(100deg);
+    top: 4.3rem;
+    left: 1.2rem;
+}
+.cardiogram-loading > *:nth-child(9) {
+    width: 4rem;
+    left: 0;
+}
+.cardiogram-loading:before {
+    content: "";
+    height: calc(100% + 2rem);
+    width: 100%;
+    display: inline-block;
+    top: -1rem;
+    position: absolute;
+    left: 0;
+    background-color: #f4f4f4;
+    z-index: 100;
+    -moz-animation: cardiogram-loader 3500ms infinite linear;
+    -webkit-animation: cardiogram-loader 3500ms infinite linear;
+    animation: cardiogram-loader 3500ms infinite linear;
+}
+@-moz-keyframes cardiogram-loader {
+    0% {
+        left: 0;
+    }
+    66% {
+        left: 100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+@-webkit-keyframes cardiogram-loader {
+    0% {
+        left: 0;
+    }
+    66% {
+        left: 100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+@keyframes cardiogram-loader {
+    0% {
+        left: 0;
+    }
+    66% {
+        left: 100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+@-moz-keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    67% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@-webkit-keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    67% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    67% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+/************** loading类型 **************/

@@ -1,0 +1,9 @@
+.blog-logo {
+    margin: 0 1.5rem;
+    padding: 2rem 0;
+    border-bottom: solid 1px #eaeaea;
+    color: #bf2e1b;
+}
+.nav-item-active {
+    background: rgba(204,204,204,0.4);
+}

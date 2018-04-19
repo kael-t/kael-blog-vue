@@ -1,0 +1,101 @@
+/************** 去除默认样式 *************/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Avenir,Helvetica,Arial,sans-serif;
+}
+html {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+}
+li{
+    list-style:none
+}
+button {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+input {
+    background:none;
+    outline:none;
+    border:0;
+}
+pre {
+    background-color: #f5f5f5;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    margin: 10px 0 10px 0;
+    overflow-x: auto;
+}
+blockquote {
+    border-left: 10px #e4e9eb solid;
+    background-color: #f5f5f5;
+    padding: 15px 20px;
+    margin: 10px 0 10px 0;
+}
+strong {
+    color: #579eff;
+}
+code {
+    font-family: monospace;
+    font-size: 1.2rem;
+}
+/************** 去除默认样式 *************/
+/******************* 全局默认样式 ********************/
+.g-container {
+    width: 100%;
+    height: 100%;
+}
+/* 清除浮动 */
+.g-container:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+}
+.g-left-nav {
+    float: left;
+    width: 9rem;
+    height: 100%;
+    z-index: 9;
+    border-right: 1px solid #f1f1f1;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+.g-left-nav .iconfont {
+    font-size: 3.5rem;
+}
+.g-main-content {
+    margin-left: 9rem;
+    min-height: 100%;
+}
+.nav-item {
+    padding: 3rem 0;
+    color: #20a0ff;
+    -webkit-transition: all .2s ease-in;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -ms-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+.nav-item:hover {
+    background: rgba(204,204,204,0.4);
+    cursor: pointer;
+}
+.fade-left-enter-active, .fade-left-leave-active {
+    transition: all .5s;
+}
+.fade-left-enter, .fade-left-leave-to /* .fade-leave-active in <2.1.8 */ {
+    opacity: 0;
+    transform: translateX(-50%);
+}
+/******************* 全局默认样式 ********************/

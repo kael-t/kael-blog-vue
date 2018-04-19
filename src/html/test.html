@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="../css/rem.css">
+    <link rel="stylesheet" href="../css/App/common.css">
+    <link rel="stylesheet" href="../css/App.css">
+    <link rel="stylesheet" href="../css/popup.css">
+    <link rel="stylesheet" href="../css/loading.css">
+    <link rel="stylesheet" href="../css/toast.css">
+</head>
+<body>
+<div id="app"  class="g-container">
+    <div class="left-col">
+        <div class="self-introduce">
+            <div class="profile-pic">
+                <img src="" alt="">
+            </div>
+            <div class="self-info">
+                <h1>{{name}}</h1>
+                <h3>{{personalizedSignature}}</h3>
+            </div>
+            <nav>
+                <ul>
+                    <li @click="toIndex()">首页</li>
+                    <li @click="toPicture()">首页</li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="main-col-wrap">
+        <div class="main-col">
+            <div class="g-main-container">
+                <!--<router-view>-->
+                <div class="g-main-content">
+                    <div class="g-section-title-wrap">
+                        <div class="g-section-title">
+                            <div class="title-underline"></div>
+                            <div class="title">照片</div>
+                        </div>
+                    </div>
+                    <div class="g-section-content">
+
+                    </div>
+                </div>
+                <!--</router-view>-->
+            </div>
+
+            <!--<loading>-->
+            <div class="loading clock-loading-wrap">
+                <div class="clock-loading">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <div></div>
+                </div>
+            </div>
+            <!--</loading>-->
+        </div>
+    </div>
+
+    <div class="float-ele float-btn">
+        <span class="btn-line"></span>
+        <span class="btn-line"></span>
+        <span class="btn-line"></span>
+    </div>
+    <div class="float-ele float-menu">
+        <ul>
+            <li>登录</li>
+            <li>注册</li>
+        </ul>
+    </div>
+    <div class="mask" style="display: none;">
+        <div class="modal-wrap">
+            <div class="modal" :class="sizeClass" style="width: 30%">
+                <div class="modal-header">
+                    <h4 class="modal-title">{{title}}</h4>
+                    <div class="modal-close">&times;</div>
+                </div>
+                <div class="modal-body">
+                    <div class="field required">
+                        <label>用户名</label>
+                        <input placeholder="用户名" type="text">
+                    </div>
+                    <div class="field required">
+                        <label>密码</label>
+                        <input placeholder="密码" type="text">
+                    </div>
+                    <div class="field required">
+                        <label>确认密码</label>
+                        <input placeholder="确认密码" type="text">
+                    </div>
+                    <div class="field required">
+                        <label>性别</label>
+                        <div class="selection dropdown" tabindex="0">
+                            <select>
+                                <option value="m">男</option>
+                                <option value="f">女</option>
+                                <option value="x">保密</option>
+                            </select>
+                            <i class="iconfont icon-drop dropdown-icon"></i>
+                            <div class="text">男</div>
+                            <div class="menu transition hidden" tabindex="-1">
+                                <div class="menu-item selected" data-value="m">男</div>
+                                <div class="menu-item" data-value="f">女</div>
+                                <div class="menu-item" data-value="x">保密</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field required">
+                        <label>头像</label>
+                        <input type="file">
+                    </div>
+                    <div class="field">
+                        <label>个人简介</label>
+                        <textarea name="bio" rows="5"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary">按钮</button>
+                    <button class="btn ">按钮</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast-wrap toast-animation">
+        <div class="toast-msg">这是toast</div>
+    </div>
+</div>
+<script type="text/javascript" src="js/index.js?ea328b18b2c9ac2c910d"></script></body>
+</html>

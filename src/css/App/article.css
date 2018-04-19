@@ -1,0 +1,42 @@
+.article-preview-wrap {
+    height: 12rem;
+    background: white;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+}
+.article-preview-title-wrap {
+    height: 2.5rem;
+    line-height: 2.5rem;
+}
+.article-preview-label {
+    font-weight: 400;
+    font-size: 1rem;
+    color: #32d3c3;
+    border: solid 1px #32d3c3;
+    padding: 0.1rem 0.7rem;
+    border-radius: 5px;
+    vertical-align: top;
+}
+.article-preview-title:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.article-preview-content-wrap {
+    position: relative;
+    height: calc(100% - 2.5rem);
+}
+.article-preview-content {
+    height: 8rem;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: #666;
+}
+.article-preview-content-footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #999;
+}

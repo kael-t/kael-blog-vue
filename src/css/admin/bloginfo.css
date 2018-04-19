@@ -1,0 +1,90 @@
+.blog-info-wrap {
+    position: fixed;
+    width: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.blog-info-title {
+    font-size: 2.4rem;
+    color: #20a0ff;
+    padding-bottom: 2rem;
+}
+.blog-info-content {
+    color: #48576a
+}
+.info-item {
+    margin: 1rem 2rem;
+}
+.info-item > label {
+    width: 7rem;
+    padding: 0.5rem 1rem;
+    text-align: right;
+    float: left;
+    font-size: 1.2rem;
+}
+.info-item > .info {
+    margin-left: 10rem;/* 与label的width值相同 */
+}
+.info > input,
+.info > textarea,
+.info > .editableDiv {
+    width: 100%;
+    border: 1px solid #bfcbd9;
+    box-sizing: border-box;
+    padding: 0.5rem 0.5rem;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    color: #48576a;
+    -webkit-transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    -moz-transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    -o-transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    -ms-transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+}
+.info > input:hover,
+.info > textarea:hover,
+.info > .editableDiv:hover {
+    border-color: #8391a5;
+}
+.info > input:focus,
+.info > textarea:focus,
+.info > .editableDiv:focus {
+    outline: 0;
+    border-color: #20a0ff;
+}
+.info > .editableDiv {
+    text-align: left;
+    height: 11rem;
+}
+.info > .editableDiv > div {
+    font-size: 1.2rem;
+}
+.info > textarea {
+    resize: vertical;
+}
+.info-item:after {
+    display: block;
+    visibility: hidden;
+    content: '';
+    clear: both;
+}
+.save-btn {
+    color: #fff;
+    background: #20a0ff;
+    border-color: #4db3ff;
+    border: 1px solid ;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    outline: 0;
+}
+.save-btn:hover {
+    cursor:pointer;
+}
+.save-btn:active {
+    background: #1d90e6;
+    border-color: #1d90e6;
+    color: #fff;
+}

@@ -1,0 +1,140 @@
+.comment-wrap {
+    padding: 1rem 0;
+}
+.comment-wrap:after {
+    content: '';
+    display: block;
+    clear: both;
+    visibility: hidden;
+}
+.comment-info {
+    float: left;
+    width: 6rem;
+    overflow: hidden;
+}
+.comment-info > img {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    margin: auto;
+    display: block;
+}
+.comment-main {
+    position: relative;
+    margin-left: 6rem;
+}
+/* 实现小三角 */
+.comment-main:before,
+.comment-main:after {
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    border-style: solid;
+    display: inline-block;
+    position: absolute;
+    content: "";
+}
+.comment-main:before {
+    border-width: .6rem .6rem .6rem 0;/* 把左边框大小设为0,加上下面一行的属性使得该元素成为一个小三角形 */
+    border-color: transparent #ccc;/* 上下边框设为透明 左右边框颜色设成与comment-textarea边框颜色相同 */
+    left: -0.5rem;
+    top: 1.3rem;
+}
+.comment-main:after {
+    border-width: 0.5rem 0.5rem 0.5rem 0;/* 边框大小比before设置的略小 */
+    border-color: transparent white;/* 这里将左右边框设为与背景颜色相同,覆盖到before生成的小三角上,挡住三角内部,形成空心效果 */
+    left: -0.4rem;
+    top: 1.4rem;
+}
+.comment-textarea {
+    width: 95%;
+    padding: 1rem;
+    border-radius: 7px;
+    resize: none;
+    outline: none;
+    border: solid 1px #ccc;
+    -webkit-transition: all .2s ease-in;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -ms-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+.comment-footer {
+    margin: 1rem 3rem;
+}
+.comment-footer:after {
+    content: '';
+    display: block;
+    clear: both;
+    visibility: hidden;
+}
+.comment-btn {
+    float: right;
+    padding: 0.5rem 1rem;
+    background: #32d3c3;
+    border: none;
+    cursor: pointer;
+    color: white;
+    border-radius: 0.5rem;
+    outline: none;
+}
+.comment-reply-header {
+    width: 9rem;
+    text-align: center;
+    border-bottom: solid 2px;
+    padding: 1rem 0;
+    color: #20a0ff;
+}
+.single-comment-wrap {
+    padding: 1rem 0.5rem;
+}
+.single-comment-wrap:after {
+    content: '';
+    display: block;
+    clear: both;
+    visibility: hidden;
+}
+.single-comment-content-wrap {
+    margin-left: 6rem;
+    max-width: 90%;
+}
+.single-comment-content {
+    position: relative;
+    display: inline-block;
+    border: solid 1px #ccc;
+    min-height: 3rem;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    color: #666;
+}
+.single-comment-content:before,
+.single-comment-content:after {
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    border-style: solid;
+    display: inline-block;
+    position: absolute;
+    content: "";
+}
+.single-comment-content:before {
+    border-width: .6rem .6rem .6rem 0;/* 把左边框大小设为0,加上下面一行的属性使得该元素成为一个小三角形 */
+    border-color: transparent #ccc;/* 上下边框设为透明 左右边框颜色设成与comment-textarea边框颜色相同 */
+    left: -0.6rem;
+    top: 0.7rem;
+}
+.single-comment-content:after {
+    border-width: 0.5rem 0.5rem 0.5rem 0;/* 边框大小比before设置的略小 */
+    border-color: transparent white;/* 这里将左右边框设为与背景颜色相同,覆盖到before生成的小三角上,挡住三角内部,形成空心效果 */
+    left: -0.5rem;
+    top: 0.8rem;
+}
+.commentator {
+    color: black;
+}
+.commentator:hover {
+    text-decoration: underline;
+    color: cornflowerblue;
+    cursor: default;
+}

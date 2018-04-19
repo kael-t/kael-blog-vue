@@ -1,0 +1,140 @@
+.mask {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.6);
+    height: 100%;
+    z-index: 1000;
+}
+.modal-wrap {
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+.modal {
+    position: relative;
+    top: 10rem;
+    margin: 0 auto;
+    background-color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+.modal-header {
+    padding: 1.5rem 2.5rem;
+    border-bottom: 1px solid #e9eaec;
+    line-height: 1;
+}
+.modal-title,
+.modal-close {
+    display: inline-block;
+}
+.modal-close {
+    float: right;
+}
+.modal-close:hover {
+    cursor: pointer;
+}
+.modal-body {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+.modal-footer {
+    border-top: 1px solid #e9eaec;
+    padding: 1rem 2rem;
+    text-align: right;
+}
+.pop-hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+.modal-hidden {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transform: scale(0.8);
+}
+.mask-transition,
+.modal-transition {
+    -webkit-transition: all .2s ease-in;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -ms-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+/*************** 模态框尺寸 **************/
+.modal.xl-modal {
+    width: 80%;
+}
+.modal.l-modal {
+    width: 70%;
+}
+.modal.m-modal {
+    width: 60%;
+}
+.modal.s-modal {
+    width: 40%;
+}
+.modal.xs-modal {
+    width: 30%;
+}
+/*************** 模态框尺寸 **************/
+/*************** 按钮样式 **************/
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    line-height: 1.5;
+    padding: 6px 15px;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: color .2s linear,background-color .2s linear,border .2s linear;
+    color: #495060;
+    background-color: #f7f7f7;
+}
+.btn-info {
+    color: #fff;
+    background-color: #2db7f5;
+    border-color: #2db7f5;
+}
+.btn-success {
+    color: #fff;
+    background-color: #19be6b;
+    border-color: #19be6b;
+}
+.btn-warning {
+    color: #fff;
+    background-color: #f90;
+    border-color: #f90;
+}
+.btn-error {
+    color: #fff;
+    background-color: #ed3f14;
+    border-color: #ed3f14;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #2d8cf0;
+    border-color: #2d8cf0;
+}
+.btn-ghost {
+    color: #495060;
+    background-color: transparent;
+    border-color: #dddee1;
+}
+/*************** 按钮样式 **************/
